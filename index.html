@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <div class="form-products">        
+        <h2>Information Products</h2>
+        <label>Tên sản phẩm </label>
+        <input type="text" id="nameProducts" >
+        <span id="nameError" class="error"></span>
+        <br/>
+        
+        <label>Số lượng</label>
+        <input type="number" min="0" id = "amountProducts">
+        <span id="amountError" class="error"></span>
+        <br/>
+
+        <label>Nhà sản xuất</label>
+        <input type="text"  id="manufacturer">
+        <span id="manuError" class="error"></span>
+        <br/>
+
+        <label>Hình ảnh</label>
+        <form action="">
+            <img src="" alt="" id="image" width="100px" height="100px">
+            <input type="file" name="" id="imageFile" accept="image/gif,image/png,image/jpeg" onchange="chooseFile(this)" >
+        </form>
+        <br/>
+
+        <label>&nbsp;</label>
+        <br/>
+        <button onclick="createProducts()">Create</button>
+        <button onclick="searchProducts()">Search</button>
+    </div>  
+
+    <div class="list-products">
+        <h2>List Products</h2>
+        <table id="productsList" width="600" border="1" cellpadding="0" cellpadding="0">
+            <tr>
+                <td>Tên sản phẩm</td>
+                <td>Số lượng</td>
+                <td>Nhà sản xuất</td>
+                <td>Hình ảnh</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+</html>
+<script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
+<script src="manageProducts.js"></script>
+
